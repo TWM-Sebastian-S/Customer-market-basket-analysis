@@ -4,7 +4,7 @@
 
 ## Project Overview
 
-Machine Learning Project in Python created to to perform market basket analysis with the application of Apriori and FP growth algorithms based on the concept of association rule learning.
+Machine Learning Project in Python created to perform market basket analysis with the application of Apriori and FP growth algorithms based on the concept of association rule learning.
 Project included: 
   - Description of association rules and techniques with deep understanding of the algorithms.
   - Breakdown Problem Statement
@@ -41,7 +41,7 @@ I created two different models doing some feature engineering and one hot encodi
 
 ## Model Performance
 
-Apriori was significantly more computationally expensive with smal thresholds, but as the threshold increase, it lower it's performing time. On the other hand, FPgrowth was faster at the beginning was the decrease rate when decreasing the threshold, was smaller than Aprior.
+Apriori was significantly more computationally expensive with smal thresholds, but as the threshold increase, it lower it's performing time. On the other hand, FPgrowth was faster at the beginning was the decrease rate when decreasing the threshold, was smaller than Apriori.
 
 ![Models Performance](https://github.com/TWM-Sebastian-S/Customer-market-basket-analysis/blob/main/Models%20performance.JPG "Models Performance")
 
