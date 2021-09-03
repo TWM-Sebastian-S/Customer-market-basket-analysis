@@ -26,41 +26,25 @@ Association analysis, which is useful for discovering interesting relationships 
 
 Food Mart (FM) is a chain of convenience stores in the United States. The private company's headquarters are located in Mentor, Ohio, and there are currently approximately **325 stores located in the US**. Food Mart operates on the franchise system.
 
-In the following project I will work with the Telecom Company database containing information regarding their customers and churn situation.
+In the following project I will work with the transactions dataset containing information regarding customers and purchases.
 
 ## Code and resources used
-**Python Version:** 3.7
+**Python Version:** 3.9
 
-**Packages:** Pandas / Numpy / Seaborn / Scikitlearn
+**Packages:** Pandas / Numpy / Seaborn / mlextend
 
-**ML Resources:** Logistic Regression / Gradient Boosting / Cross-validation / AUC / ROC / Confusion Matrix
+**ML Resources:** Association Rules
 
 ## Model Building
 
-First, I built a logistic regression as it's a statistical model that uses a logistic function to model a binary dependent variable (true/false, yes/no, 0/1, etc), although many more complex extensions exist. The model is used to model the probability of a certain class or event existing such as pass/fail, win/lose, alive/dead or healthy/sick. Churn is exactly that case.
-
-I also performed Gradient Boosting as a crosscheck using a hyperparameter tuning with a CV grid to find the best gradient boosting model. I crossvalidated using 5 folds.
+I created two different models doing some feature engineering and one hot encoding. I also used and defined the parameters of support, lift and confidence in relation to association rules.
 
 ## Model Performance
 
-I tried two different models and evaluated them using ROC curve and Precission Recall Curve.
+Apriori was significantly more computationally expensive with smal thresholds, but as the threshold increase, it lower it's performing time. On the other hand, FPgrowth was faster at the beginning was the decrease rate when decreasing the threshold, was smaller than Aprior.
 
-Generally, the use of ROC curves and precision-recall curves are as follows:
-
-- ROC curves should be used when there are roughly equal numbers of observations for each class.
-- Precision-Recall curves should be used when there is a moderate to large class imbalance.
-
-![ROC Curve](https://github.com/TWM-Sebastian-S/Predicting-Churn-using-Gradient-Boosting-and-Logistic-Regression/blob/main/ROC%20curve.JPG "ROC Curve") ![Precision Recall Curve](https://github.com/TWM-Sebastian-S/Predicting-Churn-using-Gradient-Boosting-and-Logistic-Regression/blob/main/Precision%20Recall%20Curve.JPG "Precision Recall Curve")
+![Models Performance](https://github.com/TWM-Sebastian-S/Customer-market-basket-analysis/blob/main/Models%20performance.JPG "Models Performance")
 
 
-## Recursive Feature Elimination
 
-I analyzed all variables involved and eliminated those that were the weakest ones. 
-
-## Conclusion
-
-I came up with a gradient boosting model with only the strongest features and a solid performance against Logistic Regression. The key drivers are as follows:
-
-![Key drivers of churn](https://github.com/TWM-Sebastian-S/Predicting-Churn-using-Gradient-Boosting-and-Logistic-Regression/blob/main/Key%20drivers%20of%20churn.JPG "Key drivers of Churn")
-
-[GitHub Repository](https://github.com/TWM-Sebastian-S/Predicting-Churn-using-Gradient-Boosting-and-Logistic-Regression)
+[GitHub Repository](https://github.com/TWM-Sebastian-S/Customer-market-basket-analysis)
